@@ -1,8 +1,0 @@
-mixin indexGridItem ({size, attribute, image, title, date})
-  .index-grid-item.j-item(class=`_${size} _${attribute}`).j-animate-item
-    .index-grid-item__content
-      .index-grid-item__card
-        .index-grid-item__overlay
-          p.index-grid-item__overlay-date=date
-          p.index-grid-item__overlay-text=title
-        img.index-grid-item__image(src=image, draggable="false")
