@@ -1,0 +1,39 @@
+.index-grid-filter {
+  display: flex;
+  flex-wrap: wrap;
+  &__option {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    padding: 0.4rem 0.8rem;
+    background-color: $cGrayDark;
+    cursor: pointer;
+    border-radius: 1.2rem;
+    margin-right: 0.8rem;
+    transition: background-color $changeTransition;
+    &:hover{
+      @include hover {
+        background-color: $cGrayHover;
+      }
+    }
+
+    &._selected {
+      background-color: $primaryOrange;
+      &:hover {
+        @include hover {
+          background-color: $primaryHover;
+        }
+      }
+    }
+  }
+}
+
+@include minMediaTablet {
+  .index-grid-filter {
+    &__option {
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      padding: 1.5rem 2.8rem;
+      margin-right: 1.6rem;
+    }
+  }
+}

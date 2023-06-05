@@ -1,0 +1,15 @@
+@import 'src/css/app.variables.scss';
+.block-btn {
+  color: $cWhite;
+  background: $cOrangeGradient;
+  width: 100%;
+  height: 6rem;
+  position: relative;
+  font-size: 2.4rem;
+  border-radius: 0.8rem;
+  &--disabled {
+    pointer-events: none;
+    border: 2px solid $cWhite;
+    background: transparent;
+  }
+}

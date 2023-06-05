@@ -1,0 +1,15 @@
+.screen-section {
+  width: 100%;
+  padding: 1.2rem 0;
+
+  &--bottom {
+    padding: 1.2rem 1.6rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 390px;
+    left: calc(50vw - 195px);
+    height: 9rem;
+  }
+}

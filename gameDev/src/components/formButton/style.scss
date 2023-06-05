@@ -1,0 +1,21 @@
+@import 'src/css/app.variables.scss';
+.form-btn {
+  color: $cWhite;
+  background: $cOrangeGradient;
+  width: 100%;
+  height: 6rem;
+  position: relative;
+  font-size: 2.4rem;
+  border-radius: 0.8rem;
+  font-weight: bold;
+  &--secondary {
+    background: $cGreenGradient;
+  }
+  &--orange {
+    background: $cOrange;
+  }
+  &--disabled {
+    background: $cGray;
+    pointer-events: none;
+  }
+}

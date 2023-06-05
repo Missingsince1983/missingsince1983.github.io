@@ -1,0 +1,29 @@
+@import 'src/css/app.variables.scss';
+.screen {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: url('../../assets/images/screen-bg.png') 50% no-repeat;
+  background-size: cover;
+  padding-top: 8rem;
+  &__back-button {
+    width: 6rem;
+    height: 4rem;
+    border: 0.1rem solid $cPurple;
+    color: $cPurple;
+    background: $cWhite;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+  }
+  &__rounds {
+    position: fixed;
+    bottom: 2rem;
+    color: $cWhite;
+    width: 20rem;
+    text-align: center;
+    left: calc(50vw - 10rem);
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  };
+}

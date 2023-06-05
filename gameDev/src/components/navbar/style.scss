@@ -1,0 +1,25 @@
+@import 'src/css/app.variables.scss';
+.navbar {
+  color: $cWhite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6.4rem;
+  width: 100%;
+  max-width: 390px;
+  left: calc(50vw - 195px);
+  display: flex;
+  align-items: center;
+  padding: 0 .5rem;
+  &__title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    padding-left: 1.6rem;
+  }
+  &__back {
+    width: 4rem;
+    height: 4rem;
+    background: url('../../assets/icons/back-arrow.svg') 50% no-repeat;
+    background-size: 2rem 1.6rem;
+  }
+}

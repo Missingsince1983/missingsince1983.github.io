@@ -1,0 +1,15 @@
+.main {
+  background: url('../../images/pictures/bg_pattern.svg') 50% 0% repeat-y;
+  padding-bottom: 6rem;
+}
+
+.title {
+  color: $cWhite;
+  font-weight: 700;
+}
+
+@include minMediaDesktop {
+  .main {
+    padding-bottom: 12rem;
+  }
+}

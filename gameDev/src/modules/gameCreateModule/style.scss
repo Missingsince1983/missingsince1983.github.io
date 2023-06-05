@@ -1,0 +1,20 @@
+.game-create-module {
+  &__list {
+    width: 100%;
+  }
+  &__slide {
+    padding: 0 1.6rem;
+  }
+  &__carousel {
+    background: transparent;
+    height: calc(100vh - 32rem);
+  }
+
+  &__new {
+    padding: 0 1.6rem;
+  }
+  &__new-field {
+    width: 100%;
+    margin-bottom: 1.6rem;
+  }
+}

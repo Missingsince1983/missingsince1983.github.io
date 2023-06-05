@@ -1,0 +1,10 @@
+@import 'src/css/app.variables.scss';
+.rounds-module {
+  &__slider-section {
+    padding: 0 1.6rem;
+  }
+  &__slider-marker {
+    color: $cGreen;
+    font-size: 1.6rem;
+  }
+}

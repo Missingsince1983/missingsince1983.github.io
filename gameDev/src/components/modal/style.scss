@@ -1,0 +1,34 @@
+@import '/src/css/app.variables.scss';
+.modal {
+  position: fixed;
+  background: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  z-index: 50000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  &__bg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 49900;
+    background: $bgBlack;
+    backdrop-filter: blur(0.2rem);
+  }
+  &__wrapper {
+    background: $cWhite;
+    width: calc(100vw - 3.2rem);
+    padding: 1.6rem;
+    border-radius: 0.8rem;
+    position: relative;
+    z-index: 50000;
+  }
+}
+

@@ -1,0 +1,16 @@
+.settings-color-item {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  position: relative;
+  border-width: 0.2rem;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__inner {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+}

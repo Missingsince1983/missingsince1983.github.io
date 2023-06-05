@@ -1,0 +1,15 @@
+.select-pack-module {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.6rem;
+    overflow-y: scroll;
+  }
+  &__slide {
+    padding: 0 1.6rem;
+  }
+  &__carousel {
+    background: transparent;
+    height: calc(100vh - 21rem);
+  }
+}

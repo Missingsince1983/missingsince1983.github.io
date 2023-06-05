@@ -1,0 +1,12 @@
+extends constants
+include ../indexGridItem/indexGridItem.pug
+
+block content
+  .index-grid.j-grid
+    .index-grid__options 
+      include ../indexGridFilter/indexGridFilter
+    .index-grid__content
+      .index-grid__layout.j-grid-layout._maximized
+        each item in gamesList
+          +indexGridItem(item)
+

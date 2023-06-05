@@ -1,0 +1,21 @@
+@import '/src/css/app.variables.scss';
+
+.loader {
+  position: fixed;
+  background: $cWhite;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  z-index: 50000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  &__text {
+    text-align: center;
+  }
+}
+
+
