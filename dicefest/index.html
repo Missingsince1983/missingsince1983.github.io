@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index Page</title>
+  <title>Dicefest - Календарь выхода настольных игр</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <script defer src="js/about.js"></script><script defer src="js/index.js"></script><link href="css/index.css" rel="stylesheet"></head>
 <body>
@@ -12,13 +12,13 @@
       <div class="header__logo"></div>
       <div class="header__menu">
         <ul class="header-menu j-header-menu">
-          <li class="header-menu__item"><a class="header-menu__link">Youtube</a></li>
-          <li class="header-menu__item"><a class="header-menu__link">О нас</a></li>
-          <li class="header-menu__item"><a class="header-menu__link">Контакты</a></li>
+          <li class="header-menu__item header-menu__item--active"><a class="header-menu__link" target="_blank" rel="noopener noreferer" href="https://www.youtube.com/@dicefest">Youtube</a></li>
+          <li class="header-menu__item"><a class="header-menu__link" target="_blank" rel="noopener noreferer" href="/about">О нас</a></li>
+          <li class="header-menu__item"><a class="header-menu__link" target="_blank" rel="noopener noreferer" href="/contacts">Контакты</a></li>
         </ul>
       </div>
       <div class="header__buttons">
-        <div class="header__profile"></div>
+        <div class="header__profile j-header-profile-btn">Войти</div>
         <div class="header__burger">
           <div class="header-burger j-header-burger"><span> </span><span> </span><span> </span><span></span></div>
         </div>
@@ -27,19 +27,111 @@
   </header>
   <main class="main">
     <div class="content">
-      <h1 class="title">Календарь выхода настольных игр 2023</h1>
+      <div class="index-announcment j-announce">
+        <div class="index-announcment__slider"> 
+          <div class="swiper j-announce-slider">
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide">
+                <div class="swiper-slide__content" style="background-image: url('./images/slider-ex-1.png')">
+                  <h3 class="swiper-slide__title">Долгожданные новинки</h3>
+                  <h6 class="swiper-slide__description">Набор дополнений Ужас Аркхэма. «Карточная игра: Забытая эпоха», «Гибельные джунгли»</h6>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__content" style="background-image: url('./images/slider-ex-2.png')">
+                  <h3 class="swiper-slide__title">Покраска миниатюр</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__content" style="background-image: url('./images/slider-ex-2.png')">
+                  <h3 class="swiper-slide__title">Набор дополнений Ужас Аркхэма. «Карточная игра: Забытая эпоха», «Гибельные джунгли»</h3>
+                </div>
+              </div>
+              <!--.swiper-slide
+              .swiper-slide__content._video(style="background-image: url('/images/video-example.png')")
+                .index-announcment__link-watch.j-video-popup-open-btn(data-url='pRVVjtdaZy8') Смотреть видео
+              
+              -->
+            </div>
+            <div class="swiper-navigation">
+              <div class="swiper-button-prev"> </div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+        <div class="index-announcment__pagination">
+          <div class="swiper j-announce-paginator"> 
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide"> 
+                <h5 class="index-announcment__pagination-slide">Долгожданные новинки</h5>
+              </div>
+              <div class="swiper-slide"> 
+                <h5 class="index-announcment__pagination-slide">Покраска миниатюр</h5>
+              </div>
+              <div class="swiper-slide"> 
+                <h5 class="index-announcment__pagination-slide">Набор дополнений Ужас Аркхэма </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-announcment__link _tablet" style="background-image: url('/images/video-example.png')">
+          <div class="index-announcment__link-watch j-video-popup-open-btn" data-url="pRVVjtdaZy8">Смотреть видео</div>
+        </div>
+      </div>
+      <div class="index-header j-header">
+        <h1 class="title index-header__title j-header-title">Календарь выхода настольных игр <span class="j-selected-year">2023</span></h1>
+        <div class="index-header__search j-search">
+          <div class="index-header__search-icon j-search-button"></div>
+          <form class="index-header__search-form">
+            <input class="index-header__search-field j-search-field" placeholder="Поиск">
+          </form>
+        </div>
+      </div>
       <div class="index-grid j-grid">
         <div class="index-grid__options"> 
-          <div class="index-grid-filter _desktop">
-            <div class="index-grid-filter__option j-grid-filter-all _selected">Все</div>
-            <div class="index-grid-filter__option j-grid-filter" data-filter="filter-1">Фильтр 1</div>
-            <div class="index-grid-filter__option j-grid-filter" data-filter="filter-2">Фильтр 2</div>
-            <div class="index-grid-filter__option j-grid-filter" data-filter="filter-3">Фильтр 3</div>
+          <div class="index-grid__month-select">
+            <div class="index-grid-filter">
+              <div class="index-grid-filter__option j-grid-filter-all _selected">Все</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-1">Январь</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-2">Февраль</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-3">Март</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-4">Апрель</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-5">Май</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-6">Июнь</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-7">Июль</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-8">Август</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-9">Сентябрь</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-10">Октябрь</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-11">Ноябрь</div>
+              <div class="index-grid-filter__option j-grid-filter" data-filter="filter-12">Декабрь</div>
+            </div>
+          </div>
+          <div class="index-grid__year-select _desktop">
+                  <div class="custom-select j-custom-select">
+                    <div class="custom-select__header">
+                      <input class="custom-select__current j-select-input" type="text" disabled value="2023" id="categories" data-event="changeSelectedYear">
+                      <button class="custom-select__btn j-select-btn"></button>
+                    </div>
+                    <div class="custom-select__body j-select-body">
+                      <div class="custom-select__list">
+                        <div class="custom-select__item j-select-option" data-value="2023">2023</div>
+                        <div class="custom-select__item j-select-option" data-value="2022">2022</div>
+                        <div class="custom-select__item j-select-option" data-value="2021">2021</div>
+                        <div class="custom-select__item j-select-option" data-value="2020">2020</div>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+          <div class="index-grid-filter _mobile j-grid-year-filter">
+            <div class="index-grid-filter__option index-grid-filter__option--fit j-grid-year-filter-item _selected" data-year="2023">2023</div>
+            <div class="index-grid-filter__option index-grid-filter__option--fit j-grid-year-filter-item" data-year="2022">2022</div>
+            <div class="index-grid-filter__option index-grid-filter__option--fit j-grid-year-filter-item" data-year="2021">2021</div>
+            <div class="index-grid-filter__option index-grid-filter__option--fit j-grid-year-filter-item" data-year="2020">2020</div>
           </div>
         </div>
         <div class="index-grid__content">
-          <div class="index-grid__layout j-grid-layout _maximized">
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+          <div class="index-grid__layout j-grid-layout _maximized j-load-block">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item" data-id="1">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -49,7 +141,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _horizontal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _horizontal _filter-1 j-animate-item j-load-item" data-id="2">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -59,7 +151,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item" data-id="3">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -69,7 +161,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-1 j-animate-item j-load-item" data-id="4">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -79,7 +171,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _horizontal _filter-3 j-animate-item">
+                  <div class="index-grid-item j-item _horizontal _filter-3 j-animate-item j-load-item" data-id="5">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -89,7 +181,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-3 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-3 j-animate-item j-load-item" data-id="6">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -99,7 +191,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item" data-id="7">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -109,7 +201,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item" data-id="8">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -119,7 +211,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-1 j-animate-item j-load-item" data-id="9">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -129,7 +221,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item" data-id="10">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -139,7 +231,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item" data-id="11">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -149,7 +241,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -159,7 +251,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-3 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-3 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -169,7 +261,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _horizontal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _horizontal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -179,7 +271,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -189,7 +281,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _horizontal _filter-3 j-animate-item">
+                  <div class="index-grid-item j-item _horizontal _filter-3 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -199,7 +291,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -209,7 +301,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -219,7 +311,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -229,7 +321,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -239,7 +331,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -249,7 +341,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -259,7 +351,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -269,7 +361,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -279,7 +371,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -289,7 +381,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -299,7 +391,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -309,7 +401,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -319,7 +411,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-3 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-3 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -329,7 +421,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _horizontal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _horizontal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -339,7 +431,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -349,7 +441,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _horizontal _filter-3 j-animate-item">
+                  <div class="index-grid-item j-item _horizontal _filter-3 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -359,7 +451,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -369,7 +461,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -379,7 +471,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -389,7 +481,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -399,7 +491,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -409,7 +501,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -419,7 +511,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -429,7 +521,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -439,7 +531,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -449,7 +541,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -459,7 +551,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -469,7 +561,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -479,7 +571,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -489,7 +581,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -499,7 +591,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -509,7 +601,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -519,7 +611,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -529,7 +621,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -539,7 +631,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -549,7 +641,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -559,7 +651,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -569,7 +661,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -579,7 +671,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -589,7 +681,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -599,7 +691,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -609,7 +701,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -619,7 +711,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -629,7 +721,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -639,7 +731,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -649,7 +741,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -659,7 +751,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -669,7 +761,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -679,7 +771,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -689,7 +781,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -699,7 +791,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -709,7 +801,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -719,7 +811,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -729,7 +821,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -739,7 +831,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -749,7 +841,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -759,7 +851,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -769,7 +861,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -779,7 +871,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -789,7 +881,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -799,7 +891,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -809,7 +901,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -819,7 +911,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -829,7 +921,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -839,7 +931,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -849,7 +941,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -859,7 +951,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -869,7 +961,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -879,7 +971,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -889,7 +981,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -899,7 +991,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -909,7 +1001,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item">
+                  <div class="index-grid-item j-item _vertical _filter-2 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -919,7 +1011,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item">
+                  <div class="index-grid-item j-item _normal _filter-1 j-animate-item j-load-item">
                     <div class="index-grid-item__content">
                       <div class="index-grid-item__card">
                         <div class="index-grid-item__overlay">
@@ -932,13 +1024,238 @@
           </div>
         </div>
       </div>
+      <div class="popup j-video-popup">
+        <div class="popup__content">
+          <div class="popup__header">
+            <button class="popup__close j-popup-close"></button>
+          </div>
+          <div class="popup__body">
+            <div class="video-popup-form">
+              <div class="video-popup-form__iframe j-frame"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup j-auth-popup">
+        <div class="popup__content">
+          <div class="popup__header">
+            <button class="popup__close j-popup-close"></button>
+          </div>
+          <div class="popup__body">
+            <div class="auth-popup-form j-auth-popup-form j-auth-form-popup">
+              <div class="auth-popup-form__header">
+                <div class="tabs-content j-tabs-content">
+                  <div class="tabs-content__buttons tabs-content-buttons j-tabs-content-buttons">
+                    <div class="tabs-content-buttons__item">
+                            <button class="tab j-tabs-content-button _active" data-id="tab-1">
+                              <div class="tab__label" data-value="Вход">Вход</div>
+                            </button>
+                    </div>
+                    <div class="tabs-content-buttons__item">
+                            <button class="tab j-tabs-content-button" data-id="tab-2">
+                              <div class="tab__label" data-value="Регистрация">Регистрация</div>
+                            </button>
+                    </div>
+                  </div>
+                  <div class="tabs-content__content">
+                    <div class="tabs-content__item j-tabs-content-item _active" data-value="tab-1">
+                      <form class="auth-popup-form__default j-auth-popup-form-default j-ajaxform" action="" id="loginForm">
+                        <div class="auth-popup-form__inputs">
+                          <div class="auth-popup-form__input">
+                                  <div class="custom-input j-custom-input  ">
+                                    <div class="custom-input__container">
+                                      <label class="custom-input__label" for="email">E-mail</label>
+                                      <input class="custom-input__value j-custom-input-value" type="email" id="email">
+                                    </div>
+                                    <div class="custom-input__text-error j-err_undefined_undefined_TEXT">Текст ошибки</div>
+                                  </div>
+                          </div>
+                          <div class="auth-popup-form__input">
+                                  <div class="custom-input j-custom-input  ">
+                                    <div class="custom-input__container">
+                                      <label class="custom-input__label" for="password">Пароль</label>
+                                      <input class="custom-input__value j-custom-input-value" type="password" id="password">
+                                    </div>
+                                    <div class="custom-input__text-error j-err_undefined_undefined_TEXT">Текст ошибки</div>
+                                  </div>
+                          </div>
+                          <div class="auth-popup-form__button"> 
+                                  <button class="primary-button j-button-click   " type="submit"><span class="primary-button__content">Войти</span></button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="tabs-content__item j-tabs-content-item" data-value="tab-2">
+                      <form class="auth-popup-form__default j-auth-popup-form-default j-ajaxform" action="" id="registerForm">
+                        <div class="auth-popup-form__inputs">
+                          <div class="auth-popup-form__input">
+                                  <div class="custom-input j-custom-input _error ">
+                                    <div class="custom-input__container">
+                                      <label class="custom-input__label" for="email">E-mail</label>
+                                      <input class="custom-input__value j-custom-input-value" type="email" id="email">
+                                    </div>
+                                    <div class="custom-input__text-error j-err_undefined_undefined_TEXT">Текст ошибки</div>
+                                  </div>
+                          </div>
+                          <div class="auth-popup-form__input">
+                                  <div class="custom-input j-custom-input  ">
+                                    <div class="custom-input__container">
+                                      <label class="custom-input__label" for="password">Имя</label>
+                                      <input class="custom-input__value j-custom-input-value" type="password" id="password">
+                                    </div>
+                                    <div class="custom-input__text-error j-err_undefined_undefined_TEXT">Текст ошибки</div>
+                                  </div>
+                          </div>
+                          <div class="auth-popup-form__input">
+                                  <div class="custom-input j-custom-input  ">
+                                    <div class="custom-input__container">
+                                      <label class="custom-input__label" for="password">Пароль</label>
+                                      <input class="custom-input__value j-custom-input-value" type="password" id="password">
+                                    </div>
+                                    <div class="custom-input__text-error j-err_undefined_undefined_TEXT">Текст ошибки</div>
+                                  </div>
+                          </div>
+                          <div class="auth-popup-form__input">
+                                  <div class="custom-input j-custom-input  ">
+                                    <div class="custom-input__container">
+                                      <label class="custom-input__label" for="passwordrepeat">Повтор пароля</label>
+                                      <input class="custom-input__value j-custom-input-value" type="password" id="passwordrepeat">
+                                    </div>
+                                    <div class="custom-input__text-error j-err_undefined_undefined_TEXT">Текст ошибки</div>
+                                  </div>
+                          </div>
+                          <div class="auth-popup-form__button"> 
+                                  <button class="primary-button j-button-click   " type="submit"><span class="primary-button__content">Зарегистрироваться</span></button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup j-game-popup">
+        <div class="popup__content">
+          <div class="popup__header">
+            <button class="popup__close j-popup-close"></button>
+          </div>
+          <div class="popup__body">
+            <div class="game-popup-form j-game-popup-content">
+              <div class="game-popup-form__gallery">
+                <div class="game-popup-form__gallery-card">
+                  <div class="swiper-container j-gallery-top"> 
+                    <div class="swiper-wrapper"> 
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-1.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">   </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)">   </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-4.jpg)"> </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-5.jpg)"> </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">   </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)">   </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-4.jpg)"> </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-5.jpg)"> </div>
+                    </div>
+                    <div class="swiper-pagination game-popup-form__gallery-pagination"></div>
+                  </div>
+                  <div class="swiper-navigation game-popup-form__gallery-navigation">
+                    <div class="swiper-button-prev"> </div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                </div>
+                <div class="game-popup-form__gallery-list">                             
+                  <div class="swiper-container j-gallery-thumbs">
+                    <div class="swiper-wrapper"> 
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-1.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">   </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)">   </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-4.jpg)"> </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-5.jpg)"> </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)">   </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)">   </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-4.jpg)"> </div>
+                      <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-5.jpg)"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="game-popup-form__feat-description">
+                <div class="game-popup-form__features">
+                  <div class="game-popup-feature">
+                    <div class="game-popup-feature__icon game-popup-feature__icon--players"></div>
+                    <div class="game-popup-feature__text">1-4 игрока</div>
+                  </div>
+                  <div class="game-popup-feature">
+                    <div class="game-popup-feature__icon game-popup-feature__icon--clock"></div>
+                    <div class="game-popup-feature__text">90-150 минут</div>
+                  </div>
+                  <div class="game-popup-feature">
+                    <div class="game-popup-feature__icon">0+</div>
+                    <div class="game-popup-feature__text">Правила игры</div>
+                  </div>
+                </div>
+                <h2>Roll Player Adventures: Приключения в Улосе</h2>
+                <div class="game-popup-form__description">
+                  <div class="game-popup-description"> 
+                    <p class="game-popup-description__title">Дата выхода:</p>
+                    <p class="game-popup-description__text">24 сентября 2023</p>
+                  </div>
+                  <div class="game-popup-description"> 
+                    <p class="game-popup-description__title">Начало предзаказа:</p>
+                    <p class="game-popup-description__text">01 марта 2023</p>
+                  </div>
+                </div>
+                <p>Roll Player Adventures: Приключения в Улосе" — это кооперативная повествовательная настольная игра, в которой вам предстоит спасти мир Улоса! В роли солдат Королевской гвардии игроки будут принимать решения, от которых зависят судьбы как отдельных людей, так и целых городов – а то и стран!</p>
+                <div class="game-popup-form__description">
+                  <div class="game-popup-description"> 
+                    <p class="game-popup-description__title">Производитель:</p>
+                    <p class="game-popup-description__text">Hobby World, Thunderworks Games</p>
+                  </div>
+                </div>
+                <div class="game-popup-form__additional"> 
+                  <div class="drop-down-list-item j-game-drop-down-list-item">
+                    <button class="drop-down-list-item__header j-drop-down-list-item-button">
+                      <div class="drop-down-list-item__label">Обзоры</div>
+                    </button>
+                    <div class="drop-down-list-item__content j-drop-down-list-item-content">
+                      <div class="drop-down-list-item__container">
+                        <div class="game-popup-frame__list"> <a class="game-popup-frame__item" href="https://www.youtube.com/watch?v=bGTBkOCphUc" target="_blank" rel="noopener noreferer"><iframe src="https://www.youtube.com/embed/bGTBkOCphUc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></a><a class="game-popup-frame__item" href="https://www.youtube.com/watch?v=bGTBkOCphUc" target="_blank" rel="noopener noreferer"><iframe src="https://www.youtube.com/embed/bGTBkOCphUc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></a><a class="game-popup-frame__item" href="https://www.youtube.com/watch?v=bGTBkOCphUc" target="_blank" rel="noopener noreferer"><iframe src="https://www.youtube.com/embed/bGTBkOCphUc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="drop-down-list-item j-game-drop-down-list-item">
+                    <button class="drop-down-list-item__header j-drop-down-list-item-button">
+                      <div class="drop-down-list-item__label">Комплектация</div>
+                    </button>
+                    <div class="drop-down-list-item__content j-drop-down-list-item-content">
+                      <div class="drop-down-list-item__container">
+                        <ul> 
+                          <li>12 книг приключений</li>
+                          <li>Книга навыков</li>
+                          <li>6 двухсторонних полей приключений</li>
+                          <li>4 планшета персонажей</li>
+                          <li>Размер карт: 41x63 мм (рекомендуются протекторы из данного раздела, 36 шт.)</li>
+                          <li>Вес: 6.52 кг</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
   <footer class="footer">
     <div class="footer__data">
       <div class="footer__copyright">© 2023—2024 Dicefest</div><a class="footer__policy">Политика конфиденциальности</a>
     </div>
-    <div class="footer__links"> <a class="footer__link footer__link--youtube"></a><a class="footer__link footer__link--vk"></a><a class="footer__link footer__link--telegram"></a></div>
+    <div class="footer__links"> <a class="footer__link footer__link--youtube" target="_blank" rel="noopener noreferer" href="https://www.youtube.com/@dicefest"></a><a class="footer__link footer__link--vk" target="_blank" rel="noopener noreferer" href="https://vk.com/dicefest"></a><a class="footer__link footer__link--telegram" target="_blank" rel="noopener noreferer" href="https://t.me/dicefest"></a></div>
   </footer>
   <script src="https://unpkg.com/muuri@0.6.3/dist/muuri.min.js"></script>
+  <script src="scripts/coreTs.js"></script>
 </body>
