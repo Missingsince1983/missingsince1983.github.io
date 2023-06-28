@@ -87,7 +87,10 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
     'prefer-promise-reject-errors': 'off',
-
+    'vue/max-attributes-per-line': 'off',
+    'vue/html-indent': 'off',
+    'vue/html-closing-bracket-newline': 'off',
+    'space-before-function-paren': 'off',
     // TypeScript
     quotes: ['warn', 'single', { avoidEscape: true }],
     '@typescript-eslint/explicit-function-return-type': 'off',

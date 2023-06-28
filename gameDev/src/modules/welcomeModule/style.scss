@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  height: fit-content;
+  min-height: 100vh;
   background: url('../../assets/images/main-bg.png') 50% 70% no-repeat;
   background-size: cover;
   padding: 4rem;

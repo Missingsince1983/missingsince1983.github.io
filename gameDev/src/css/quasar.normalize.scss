@@ -22,9 +22,11 @@ html body {
   min-width: $minContentWidth;
 }
 html {
-  font-size: 10px;
-  min-width: 390px;
-  background-color: #73eded;
+  // 1rem === 10px
+  font-size: calc(100vw / #{$mobileBreakpoint} * 10);
+  @include minMediaTablet {
+    font-size: 10px;
+  }
 }
 a {
   text-decoration: none;

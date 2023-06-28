@@ -1,15 +1,47 @@
+@import 'src/css/mixns.scss';
 .main-layout {
-  height: 100vh;
-  width: 390px;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   position: relative;
   overflow: hidden;
-  margin: 0 auto;
+  background: $cLightPurple;
   &__container {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
+    right: 0;
+    overflow: auto;
+    
+    @include minMediaDesktop {
+      width: 360px;
+    }
+    @include minMediaMaxDesktop {
+      width: 500px;
+    }
+  }
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
     overflow: auto;
   }
+
+  &__desktop {
+    display: none;
+    @include minMediaDesktop {
+      display: block;
+      padding: 1.6rem;
+      padding-right: 392px;
+      max-width: 1600px;
+      margin-left: auto;
+    }
+    @include minMediaMaxDesktop {
+      padding-right: 580px;
+    }
+  }
+
 }

@@ -1,17 +1,8 @@
 <template>
-  <div
-    :class="['pack-card', { 'pack-card--selected': isSelected }]"
-    :style="pack.image ? `background-image: url(${pack.image})` : ''"
-    @click="selectQuestionsPack"
-  >
-    <div
-      v-if="isSelected"
-      class="pack-card__select"
-    />
-    <div
-      v-if="pack.tag"
-      class="pack-card__tag"
-    >
+  <div :class="['pack-card', { 'pack-card--selected': isSelected }]"
+    :style="pack.image ? `background-image: url(${pack.image})` : ''" @click="selectQuestionsPack">
+    <div v-if="isSelected" class="pack-card__select" />
+    <div v-if="pack.tag" class="pack-card__tag">
       {{ pack.tag }}
     </div>
     <div class="pack-card__title">
@@ -20,12 +11,6 @@
     <div class="pack-card__amount">
       {{ pack.amount }}
     </div>
-    <!-- <block-button
-      :text="pack.title"
-      :click-handler="selectQuestionsPack"
-      :is-selected="isSelected"
-    />
-    <block-subtitle :text="pack.description" /> -->
   </div>
 </template>
 
@@ -41,7 +26,7 @@ export default defineComponent({
     pack: { type: Object as PropType<QuestionPackType>, required: true },
     isSelected: { type: Boolean, required: true }
   },
-  setup (props) {
+  setup(props) {
     const { selectQuestionsPack } = useController({
       pack: props.pack // eslint-disable-line
     })

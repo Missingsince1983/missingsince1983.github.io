@@ -4,6 +4,13 @@
     :style="`background-color: ${CurrentColorTheme?.mainBgColor}`"
   >
     <slot />
+    <!-- <q-btn
+      v-if="isBackButtonVisible"
+      class="screen__back-button"
+      @click="backFunction"
+    >
+      Назад
+    </q-btn> -->
     <div
       v-if="hasVisibleRounds"
       class="screen__rounds"

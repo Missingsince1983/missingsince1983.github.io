@@ -1,13 +1,6 @@
 <template>
-  <div
-    class="navbar"
-    :style="`background: ${bgColor}`"
-  >
-    <div
-      v-if="!isHiddenBack"
-      class="navbar__back"
-      @click="delayedClickHandler"
-    />
+  <div class="navbar" :style="`background: ${bgColor}`">
+    <div v-if="!isHiddenBack" class="navbar__back" @click="delayedClickHandler" />
     <h2 class="navbar__title">
       {{ title }}
     </h2>
@@ -28,7 +21,7 @@ export default defineComponent({
     backFunction: { type: Function as PropType<() => void>, required: false, default: null },
     isHiddenBack: { type: Boolean, required: false, default: false }
   },
-  setup (props) {
+  setup(props) {
     const { delayedClickHandler } = useController({ backFunction: props.backFunction })
     return {
       delayedClickHandler

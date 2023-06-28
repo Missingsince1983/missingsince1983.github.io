@@ -9,21 +9,21 @@
   {
     "id": "2",
     "title": "Про животных",
-    "image": "https://avatars.mds.yandex.net/i?id=5838137a2f6f39c77e7c57b33b0253f64757b170-8986614-images-thumbs&n=13",
+    "image": "./pics/pack-3.png",
     "amount": 100,
     "path": "standard"
   },
   {
     "id": "3",
     "title": "Весенний",
-    "image": "https://montessoriself.ru/wp-content/uploads/2016/03/v40.jpg",
+    "image": "./pics/pack-1.jpeg",
     "amount": 100,
     "path": "flowers"
   },
   {
     "id": "4",
     "title": "Весенний",
-    "image": "https://montessoriself.ru/wp-content/uploads/2016/03/v40.jpg",
+    "image": "./pics/pack-2.jpeg",
     "amount": 100,
     "tag": "Хит!",
     "path": "flowers"
@@ -32,21 +32,21 @@
     "id": "5",
     "title": "Наука",
     "amount": 100,
-    "image": "https://nauka.bg/wp-content/uploads/2022/04/vechen-abonament-02-02-1.svg",
-    "tag": "Хардкооод",
+    "image": "./pics/pack-2.jpeg",
+    "tag": "Хардкооор",
     "path": "hard"
   },
   {
     "id": "6",
     "title": "Весенний",
-    "image": "https://montessoriself.ru/wp-content/uploads/2016/03/v40.jpg",
+    "image": "./pics/pack-1.jpeg",
     "amount": 100,
     "path": "flowers"
   },
   {
     "id": "7",
     "title": "Весенний",
-    "image": "https://montessoriself.ru/wp-content/uploads/2016/03/v40.jpg",
+    "image": "./pics/pack-1.jpeg",
     "amount": 100,
     "path": "flowers"
   }

@@ -1,3 +1,8 @@
+@import 'src/css/app.variables.scss';
 .game-betting-module {
-  padding: 0 1.6rem;
+  &__wrapper {
+    padding: 0 1.6rem;
+    color: $tBlack!important;
+  }
+
 }

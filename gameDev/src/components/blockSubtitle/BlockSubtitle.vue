@@ -1,7 +1,5 @@
 <template>
-  <h3
-    class="block-subtitle"
-  >
+  <h3 class="block-subtitle">
     {{ text }}
   </h3>
 </template>
@@ -17,7 +15,7 @@ export default defineComponent({
   props: {
     text: { type: String, required: true }
   },
-  setup () {
+  setup() {
     const { CurrentColorTheme } = useController()
     return {
       CurrentColorTheme

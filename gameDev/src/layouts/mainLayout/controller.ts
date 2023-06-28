@@ -2,13 +2,15 @@ import { computed } from 'vue'
 import { useStore } from 'src/store'
 import { SettingsColor } from 'src/store/settings/types'
 import { useRoute, useRouter } from 'vue-router'
-
+const LOADER_TIME = 700
 const useController = () => {
   const store = useStore()
   const route = useRoute()
   const router = useRouter()
   const changeIsGeneralLoading = (val: boolean) => { store.commit('general/mutateIsGeneralLoading', val) }
   const loadQuestionsPackList = async () => { await store.dispatch('questions/loadQuestionsPackList') }
+
+  const calculateVisibleSpaceHeight = async () => { await store.dispatch('general/calculateVisibleSpaceHeight') }
 
   const setCurrentQuestionByCategory = (val: SettingsColor) => { store.commit('settings/mutateCurrentColorTheme', val) } //eslint-disable-line
   const IsGeneralLoading = computed(() => store.state.general.isGeneralLoading)
@@ -19,7 +21,7 @@ const useController = () => {
       setTimeout(() => {
         changeIsGeneralLoading(false)
         resolve()
-      }, 500)
+      }, LOADER_TIME)
     })
   }
 
@@ -42,8 +44,10 @@ const useController = () => {
     loadSettingsFromLocalStorage()
     await loadQuestionsPackList()
     await generalLoading()
+    void calculateVisibleSpaceHeight()
     window.addEventListener('resize', () => {
       resizeHandler()
+      void calculateVisibleSpaceHeight()
     })
   }
 

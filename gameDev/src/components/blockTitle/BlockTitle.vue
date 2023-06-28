@@ -1,7 +1,5 @@
 <template>
-  <h2
-    class="block-title"
-  >
+  <h2 class="block-title">
     {{ text }}
   </h2>
 </template>
@@ -17,7 +15,7 @@ export default defineComponent({
   props: {
     text: { type: String, required: true }
   },
-  setup () {
+  setup() {
     const { CurrentColorTheme } = useController()
     return {
       CurrentColorTheme

@@ -1,9 +1,8 @@
-import GetService from 'src/services/GetService'
 import LoadService from 'src/services/LoadService'
 
 import { ActionTree } from 'vuex'
 import { StateInterface } from '../index'
-import { formatCategoryArrayByExcludedValues, getRandomArbitrary } from './helpers'
+import { createdAnswersListData, getRandomArbitrary } from './helpers'
 import { QuestionsStateInterface } from './state'
 import { AnsweredQuestionsType, CategoryResponseType, CategoryType, QuestionPackResponseType } from './types'
 
@@ -36,22 +35,9 @@ const actions: ActionTree<QuestionsStateInterface, StateInterface> = {
   selectRandomQuestion(context) {
     const currentCategory = context.getters.getSelectedCategory as CategoryType
     const answeredQuestions = context.getters.getAnsweredQuestions as AnsweredQuestionsType[]
-    const unrepeatedQuestionsList = formatCategoryArrayByExcludedValues(currentCategory, answeredQuestions)
-    const randomNum = getRandomArbitrary(0, unrepeatedQuestionsList.length - 1)
-    const isRepeatableArrayAreEqualToInitial = unrepeatedQuestionsList.length === currentCategory.questions.length
-    const selectedQuestion = unrepeatedQuestionsList[randomNum]
+
+    const { selectedQuestion, answersListToMutate } = createdAnswersListData({ currentCategory, answeredQuestions })
     context.commit('mutateActiveQuestion', selectedQuestion)
-    const answersListToMutate = answeredQuestions.map(answered => {
-      if (answered.categoryId === currentCategory.id) {
-        return {
-          ...answered,
-          questions: isRepeatableArrayAreEqualToInitial
-            ? []
-            : [...answered.questions, selectedQuestion.id]
-        }
-      }
-      return answered
-    })
     context.commit('mutateAnsweredQuestions', answersListToMutate)
   },
 

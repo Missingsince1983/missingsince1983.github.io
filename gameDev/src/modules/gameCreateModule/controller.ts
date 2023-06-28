@@ -19,7 +19,9 @@ export const useController = () => {
   }
 
   const formatedPlayersList = computed(() => {
-    const size = 4
+    const packCardHeight = 7.6 * RemSize.value
+    const countPerRow = 1
+    const size = Math.floor(VisibleSpaceHeight.value / packCardHeight) * countPerRow
     const pagesCount = Math.ceil(PlayersList.value.length / size)
     const ar = []
     for (let i = 0; i < pagesCount; i++) {
@@ -34,6 +36,9 @@ export const useController = () => {
 
   const playersAmount = computed(() => PlayersList.value.length)
 
+  const RemSize = computed(() => store.state.general.remSize)
+  const additionalHeight = 14 * RemSize.value
+  const VisibleSpaceHeight = computed(() => store.state.general.visibleSpaceHeight - additionalHeight)
   const PlayersList = computed(() => store.state.gameCreate.playersList)
   return {
     playersAmount,
@@ -41,6 +46,7 @@ export const useController = () => {
     addNewPlayer,
     continueStep,
     formatedPlayersList,
-    slide
+    slide,
+    VisibleSpaceHeight
   }
 }
